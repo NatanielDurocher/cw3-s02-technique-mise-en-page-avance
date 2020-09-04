@@ -1,21 +1,197 @@
 /*---------------------- Settings ----------------------*/
 
-/* font-family: 'Cardo', serif; */
-/* font-family: 'Bungee Shade', cursive; */
 
 /* LES VARIABLES CSS ICI */
+:root{
+    --font-primaire:'Cardo', serif;
+    --font-secondaire: 'Bungee Shade', cursive;
+    --degrade-principale: linear-gradient(36deg,rgba(167,2,154,0.7)0%,rgba(167,2,154,0)100%);
+}
 
 /*---------------------- Generic ----------------------*/
 
 /* Mettre la ligne universelle pour le box-sizing */
-
-
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+}
 
 /*---------------------- Elements ----------------------*/
+header{
+    background-color: black;
+    padding:15px  0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:3;
+
+}
+h1{
+    color: white;
+    font-family: var(--font-secondaire);
+    font-size:36px ;
+    margin: 0;
+}
+h2{
+    font-family: var(--font-secondaire);
+    font-size: 80px;
+    color: white;
 
 
+}
+h3{
+    font-family: var(--font-primaire);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
 
+h4{
+    font-family: var(--font-primaire);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.content a{
+    font-family: var(--font-primaire);
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+.content a:hover{
+    text-decoration: underline;
+}
+.content p{
+    font-family: var(--font-primaire);
+    color: white;
+    font-size: 24px;
+}
+.conteneur{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header .conteneur{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero{
+    height:80vh ;
+    background-color:black;
+    position: relative;
+}
+.hero video{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
 
+}
+.hero .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--degrade-principale);
+}
+.hero::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left:0;
+}
+.interet{
+    background-image:url("../images/bg-interet.jpg") ;
+    background-attachment:fixed;
+    height: 1300px;
+    padding-top: 100px;
+}
+.interet .conteneur p{
+    font-family: var(--font-primaire);
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.interet p {
+    font-family: var(--font-primaire);
+    font-size: 18px;
+    text-align: center;
+}
+.cartes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.carte{
+    background-color: white;
+    border: solid 1px;
+    width: 450px;
+    height: 470px;
+
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.carte img{
+    width: 50%;
+}
+.carte p{
+    font-family: var(--font-primaire);
+    font-size: 18px;
+}
+.citation{
+    background-image: url("../images/bg-citation.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    height: 700px;
+    margin: 0;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.citation h3{
+    color: white;
+}
+.citation p{
+    font-family: var(--font-primaire);
+    font-size: 18px;
+    color: black;
+}
+.footer-principal{
+    background-color: black;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-principal p{
+    font-family: var(--font-primaire);
+    font-size: 18px;
+    margin: 0;
+    color: white;
+
+}
+.footer-principal a{
+    text-decoration: none;
+    color: white;
+}
 
 /*---------------------- Components ----------------------*/
 
